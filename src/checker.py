@@ -30,8 +30,8 @@ def get_data_staked(user_address):
     wallet = fetch_data(user_address)
     address = wallet.default_address.address_id
     
-    MANTA_RPC_URL = Web3.HTTPProvider(os.getenv("MANTA_RPC_URL"))
-    w3 = Web3(Web3.HTTPProvider(MANTA_RPC_URL))
+    EDUCHAIN_RPC_URL = Web3.HTTPProvider(os.getenv("EDUCHAIN_RPC_URL"))
+    w3 = Web3(Web3.HTTPProvider(EDUCHAIN_RPC_URL))
 
     result = requests.get("https://opti-edu-backend.vercel.app/staking")
     response = result.json()

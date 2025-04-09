@@ -9,8 +9,8 @@ load_dotenv()
 class AgentWalletSync:
     def __init__(self):
         self.file_path = "./data/wallet.json"
-        MANTA_RPC_URL = Web3.HTTPProvider(os.getenv("MANTA_RPC_URL"))
-        self.w3 = Web3(MANTA_RPC_URL)
+        EDUCHAIN_RPC_URL = Web3.HTTPProvider(os.getenv("EDUCHAIN_RPC_URL"))
+        self.w3 = Web3(EDUCHAIN_RPC_URL)
         self.admin_private_key=os.getenv("PRIVATE_KEY")
 
     def fetch_data(self, user_address):

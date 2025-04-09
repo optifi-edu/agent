@@ -1,7 +1,7 @@
 ## Starting
 Clone repository:
 ```bash
-  https://github.com/optiFi-manta/opti-agent.git
+  https://github.com/optifi-edu/agent.git
 ```
 
 ## Requirements
