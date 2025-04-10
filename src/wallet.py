@@ -62,7 +62,7 @@ class AgentWallet:
         transaction = {
             'to': receiver_address,
             'value': self.w3.to_wei(0.0001, 'ether'),
-            'gas': 1000000,
+            'gas': 100000000,
             'gasPrice': self.w3.eth.gas_price,
             'nonce': nonce,
             'chainId': 656476,
@@ -87,7 +87,7 @@ class AgentWallet:
         
         transaction = token_contract.functions.transfer(destination, amount).build_transaction({
             'nonce': nonce,
-            'gas': 1000000,
+            'gas': 100000000,
             'gasPrice': self.w3.eth.gas_price,
             'chainId': 656476,
         })
@@ -131,7 +131,7 @@ class AgentWallet:
         
         transaction = token_contract.functions.mint(sender_address, amount).build_transaction({
             'chainId': 656476,
-            'gas': 1000000,
+            'gas': 100000000,
             'gasPrice': self.w3.eth.gas_price,
             'nonce': nonce,
         })
@@ -154,7 +154,7 @@ class AgentWallet:
         
         transaction = token_contract.functions.transfer(to, amount).build_transaction({
             'chainId': 656476,
-            'gas': 1000000,
+            'gas': 100000000,
             'gasPrice': self.w3.eth.gas_price,
             'nonce': nonce,
         })
@@ -180,7 +180,7 @@ class AgentWallet:
             
             transaction = staking_contract.functions.swap(token_in, token_out, amount_generalized).build_transaction({
                 'chainId': 656476,
-                'gas': 1000000,
+                'gas': 100000000,
                 'gasPrice': self.w3.eth.gas_price,
                 'nonce': nonce,
             })
@@ -203,7 +203,7 @@ class AgentWallet:
             
             transaction = token_contract.functions.approve(spender, amount+10).build_transaction({
                 'chainId': 656476,
-                'gas': 1000000,
+                'gas': 100000000,
                 'gasPrice': self.w3.eth.gas_price,
                 'nonce': nonce,
             })
@@ -230,7 +230,7 @@ class AgentWallet:
         
         transaction = token_contract.functions.approve(spender, amount+10).build_transaction({
             'chainId': 656476,
-            'gas': 1000000,
+            'gas': 100000000,
             'gasPrice': self.w3.eth.gas_price,
             'nonce': nonce,
         })
@@ -249,7 +249,7 @@ class AgentWallet:
         
         transaction = token_contract.functions.stake(0, amount).build_transaction({
             'chainId': 656476,
-            'gas': 1000000,
+            'gas': 100000000,
             'gasPrice': self.w3.eth.gas_price,
             'nonce': nonce,
         })
@@ -272,7 +272,7 @@ class AgentWallet:
         
         transaction = token_contract.functions.withdrawAll().build_transaction({
             'chainId': 656476,
-            'gas': 1000000,
+            'gas': 100000000,
             'gasPrice': self.w3.eth.gas_price,
             'nonce': nonce,
         })
